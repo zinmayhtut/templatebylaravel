@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return 'Hello Laravel';
-});
+Route::get('/', 'PageController@homefun')->name('home');//data show for a web page
+
+Route::get('about','PageController@aboutfun')->name('about');
+
+Route::get('contact','PageController@contactfun')->name('contact');
+
+Route::get('post','PageController@postfun')->name('post');
